@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+  compile:
+   docker:
+      - image: fr3akyphantom/droid-builder:latest
+   steps:
+      - run:
+          command: |
+           git clone --depth=1 https://github.com/shashank1436/kernel_xiaomi_mido --single-branch -b r11 mido
+           cd mido
+           wget https://raw.githubusercontent.com/shashank1436/ci/main/build.sh
+           bash build.sh
+workflows:
+  version: 2.1
+  cooking:
+    jobs:
+      - compile

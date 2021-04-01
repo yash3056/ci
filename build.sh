@@ -64,8 +64,8 @@ DEFCONFIG="mido_defconfig"
 AnyKernel="https://github.com/shashank1436/anykernel"
 AnyKernelbranch="master"
 
-HOSST="shashank"
-USEER="shashank's Buildbot"
+HOSST="Shashank's Buildbot"
+USEER="Shashank"
 
 TOOLCHAIN="clang"
 
@@ -132,15 +132,24 @@ Start=$(date +"%s")
 if [ "$TOOLCHAIN" == clang  ]; then
 	echo clang
 	make -j$(nproc --all) O=out \
-     		      ARCH=arm64 \
-			      AR=llvm-ar \
-			      NM=llvm-nm \
-			      OBJCOPY=llvm-objcopy \
-			      OBJDUMP=llvm-objdump \
-			      STRIP=llvm-strip \
-			      CC=clang \
-			      CROSS_COMPILE=aarch64-linux-gnu- \
-			      CROSS_COMPILE_ARM32=arm-linux-gnueabi-  2>&1 | tee error.log
+                              ARCH=arm64 \
+	                      CC="ccache clang" \
+	                      AR=llvm-ar \
+	                      NM=llvm-nm \
+	                      LD=ld.lld \
+	                      STRIP=llvm-strip \
+	                      OBJCOPY=llvm-objcopy \
+	                      OBJDUMP=llvm-objdump \
+	                      OBJSIZE=llvm-size \
+	                      READELF=llvm-readelf \
+	                      HOSTCC=clang \
+	                      HOSTCXX=clang++ \
+	                      HOSTAR=llvm-ar \
+	                      HOSTLD=ld.lld \
+	                      CROSS_COMPILE=aarch64-linux-gnu- \
+	                      CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
+	                      CONFIG_DEBUG_SECTION_MISMATCH=y \
+	                      CONFIG_NO_ERROR_ON_MISMATCH=y   2>&1 | tee error.log
 elif [ "$TOOLCHAIN" == gcc  ]; then
 	echo gcc
 	make -j$(nproc --all) O=out \

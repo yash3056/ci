@@ -136,7 +136,6 @@ if [ "$TOOLCHAIN" == clang  ]; then
 	                      CC="ccache clang" \
 	                      AR=llvm-ar \
 	                      NM=llvm-nm \
-	                      LD=ld.lld \
 	                      STRIP=llvm-strip \
 	                      OBJCOPY=llvm-objcopy \
 	                      OBJDUMP=llvm-objdump \
@@ -145,7 +144,6 @@ if [ "$TOOLCHAIN" == clang  ]; then
 	                      HOSTCC=clang \
 	                      HOSTCXX=clang++ \
 	                      HOSTAR=llvm-ar \
-	                      HOSTLD=ld.lld \
 	                      CROSS_COMPILE=aarch64-linux-gnu- \
 	                      CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
 	                      CONFIG_DEBUG_SECTION_MISMATCH=y \

@@ -57,15 +57,15 @@ API_BOT="$api"
 
 DEVICE="Redmi Note 4/4X"
 CODENAME="mido"
-KERNEL_NAME="FoxKernel"
+KERNEL_NAME="FussionKernel"
 
 DEFCONFIG="mido_defconfig"
 
 AnyKernel="https://github.com/shashank1436/anykernel"
 AnyKernelbranch="master"
 
-HOSST="shashank's Buildbot"
-USEER="Shashank"
+HOSST="Alone's Buildbot"
+USEER="Alone0316"
 
 TOOLCHAIN="clang"
 

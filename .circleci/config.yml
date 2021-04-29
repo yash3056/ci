@@ -6,7 +6,7 @@ jobs:
    steps:
       - run:
           command: |
-           git clone --depth=1 https://github.com/shashank1436/kernel_xiaomi_mido --single-branch -b r11 mido
+           git clone --depth=1 https://github.com/Hunter-commits/kernel_mido.git --single-branch mido
            cd mido
            wget https://raw.githubusercontent.com/shashank1436/ci/main/build.sh
            bash build.sh

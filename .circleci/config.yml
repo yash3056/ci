@@ -6,7 +6,7 @@ jobs:
    steps:
       - run:
           command: |
-           git clone --depth=1 https://github.com/Hunter-commits/kernel_mido.git --single-branch mido
+           git clone --depth=1 https://github.com/Hunter-commits/kernel_mido.git --single-branch -b oc mido
            cd mido
            wget https://raw.githubusercontent.com/Hunter-commits/ci/main/build.sh
            bash build.sh

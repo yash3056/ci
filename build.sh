@@ -24,6 +24,7 @@ green='\e[0;32m'
 # Deleting out "kernel complied" and zip "anykernel" from an old compilation
 echo -e "$green << cleanup >> \n $white"
 
+df -h
 rm -rf out
 rm -rf zip
 rm -rf error.log

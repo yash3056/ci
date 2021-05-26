@@ -62,7 +62,7 @@ KERNEL_NAME="zlos"
 
 DEFCONFIG="mido_defconfig"
 
-AnyKernel="https://github.com/yashlearnpython/AnyKernel3.git"
+AnyKernel="https://github.com/Hunter-commits/anykernel.git"
 AnyKernelbranch="master"
 
 HOSST="Yash's Buildbot"

@@ -6,7 +6,7 @@ jobs:
    steps:
       - run:
           command: |
-           git clone --depth=1 https://github.com/yashlearnpython/android_kernel_xiaomi_mido.git --single-branch -b lineage-16.0-mido-4.19 mido
+           git clone --depth=1 https://github.com/yashlearnpython/android_kernel_xiaomi_mido.git --depth=1 -b lineage-16.0-mido-4.19 mido
            cd mido
            wget https://raw.githubusercontent.com/yashlearnpython/ci/main/build.sh
            bash build.sh

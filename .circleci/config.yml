@@ -6,9 +6,9 @@ jobs:
    steps:
       - run:
           command: |
-           git clone --depth=1 https://github.com/yashlearnpython/android_kernel_xiaomi_mido.git --depth=1 -b wave mido
+           git clone --depth=1 https://github.com/yash3056/android_kernel_xiaomi_mido.git --depth=1 -b wave mido
            cd mido
-           wget https://raw.githubusercontent.com/yashlearnpython/ci/main/build.sh
+           wget https://raw.githubusercontent.com/yash3056/ci/main/build.sh
            bash build.sh
 workflows:
   version: 2.1

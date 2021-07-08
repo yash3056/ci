@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
-git clone --depth=1 https://github.com/vayu-lab/android_kernel_xiaomi_vayu -b android-4.14-stable kernel
-cd kernel
+git clone --depth=1 https://github.com/yash3056/android_kernel_xiaomi_vayu.git -b r1 kernel
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 git clone --depth=1 https://github.com/dracarys18/AnyKernel3 AnyKernel
 echo "Done"

@@ -75,9 +75,9 @@ function zipping() {
     zip -r9 perf-bhima-${TANGGAL}.zip *
     cd ..
 }
-sendinfo
+#sendinfo
 compile
 zipping
 END=$(date +"%s")
 DIFF=$(($END - $START))
-push
+#push

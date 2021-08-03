@@ -14,6 +14,7 @@ export LD="clang/bin/ld.lld"
 export ARCH=arm64
 export KBUILD_BUILD_HOST=notkernel
 export KBUILD_BUILD_USER="JonSnow"
+TOOLCHAIN="clang"
 # sticker plox
 #function sticker() {
 #    curl -s -X POST "https://api.telegram.org/bot$token/sendSticker" \
